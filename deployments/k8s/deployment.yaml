@@ -1,0 +1,84 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: netriun-web
+  namespace: netriun
+
+  labels:
+    app: netriun-web
+
+spec:
+  replicas: 2
+
+  revisionHistoryLimit: 3
+
+  selector:
+    matchLabels:
+      app: netriun-web
+
+  strategy:
+    type: RollingUpdate
+
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+
+  template:
+
+    metadata:
+      labels:
+        app: netriun-web
+
+    spec:
+
+      containers:
+
+        - name: netriun-web
+
+          image: docker.io/sahiiib/netriun-web:latest
+
+          imagePullPolicy: Always
+
+          ports:
+            - containerPort: 8088
+
+          env:
+            - name: PORT
+              value: "8088"
+
+            - name: APP_ENV
+              value: "production"
+
+            - name: DOMAIN
+              value: "netriun.com"
+
+          resources:
+
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+
+          readinessProbe:
+
+            httpGet:
+              path: /
+              port: 8088
+
+            initialDelaySeconds: 5
+            periodSeconds: 10
+
+          livenessProbe:
+
+            httpGet:
+              path: /
+              port: 8088
+
+            initialDelaySeconds: 15
+            periodSeconds: 20
+
+      restartPolicy: Always

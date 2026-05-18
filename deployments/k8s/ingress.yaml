@@ -6,7 +6,7 @@ metadata:
   namespace: netriun
 
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/proxy-body-size: "20m"
 
 spec:
 
@@ -14,19 +14,18 @@ spec:
 
   rules:
 
-  - host: netriun.com
+    - host: netriun.com
 
-    http:
+      http:
 
-      paths:
+        paths:
 
-      - path: /
-        pathType: Prefix
+          - path: /
+            pathType: Prefix
 
-        backend:
+            backend:
 
-          service:
-            name: netriun-service
-
-            port:
-              number: 80
+              service:
+                name: netriun-service
+                port:
+                  number: 80
