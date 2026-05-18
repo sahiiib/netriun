@@ -1,0 +1,29 @@
+<svg width="620" height="620" viewBox="0 0 620 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="orbit" x1="92" y1="96" x2="530" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00C2FF"/>
+      <stop offset="0.55" stop-color="#6EE7B7"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <circle cx="310" cy="310" r="206" stroke="url(#orbit)" stroke-width="2" stroke-dasharray="10 16" opacity=".75"/>
+  <circle cx="310" cy="310" r="138" stroke="#FFFFFF" stroke-opacity=".16" stroke-width="2"/>
+  <circle cx="310" cy="310" r="76" fill="#0D1B30" stroke="url(#orbit)" stroke-width="4" filter="url(#glow)"/>
+  <path d="M269 323L292 282L324 342L351 292L373 323" stroke="#6EE7B7" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M310 234V150M310 470V386M386 310H470M150 310H234M365 255L430 190M190 430L255 365M255 255L190 190M430 430L365 365" stroke="#00C2FF" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+  <g filter="url(#glow)">
+    <circle cx="310" cy="150" r="14" fill="#00C2FF"/>
+    <circle cx="470" cy="310" r="14" fill="#6EE7B7"/>
+    <circle cx="310" cy="470" r="14" fill="#8B5CF6"/>
+    <circle cx="150" cy="310" r="14" fill="#00C2FF"/>
+    <circle cx="430" cy="190" r="10" fill="#6EE7B7"/>
+    <circle cx="190" cy="430" r="10" fill="#6EE7B7"/>
+  </g>
+</svg>

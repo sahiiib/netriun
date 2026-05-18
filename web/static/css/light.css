@@ -1,0 +1,31 @@
+:root {
+    --bg: #eef7fb;
+    --bg-soft: #ffffff;
+    --panel: rgba(255, 255, 255, 0.84);
+    --panel-strong: rgba(255, 255, 255, 0.96);
+    --text: #07111f;
+    --muted: #52677d;
+    --line: rgba(7, 17, 31, 0.12);
+    --shadow: 0 24px 70px rgba(20, 48, 80, 0.14);
+}
+
+body {
+    color-scheme: light;
+    background:
+        radial-gradient(circle at 15% 10%, rgba(0, 194, 255, 0.22), transparent 28rem),
+        radial-gradient(circle at 85% 18%, rgba(110, 231, 183, 0.22), transparent 24rem),
+        radial-gradient(circle at 50% 100%, rgba(139, 92, 246, 0.12), transparent 30rem),
+        var(--bg);
+}
+
+.navbar {
+    background: rgba(238, 247, 251, 0.82);
+}
+
+.footer {
+    background: rgba(238, 247, 251, 0.84);
+}
+
+.language-menu option {
+    color: #07111f;
+}

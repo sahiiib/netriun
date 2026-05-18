@@ -1,0 +1,81 @@
+{{define "content"}}
+
+<section class="hero">
+
+    <div class="hero-copy">
+        <p class="eyebrow" data-i18n="home.eyebrow">AI-native networking platform</p>
+
+        <h1 data-i18n="home.title">Engineering Intelligent Networks</h1>
+
+        <p data-i18n="home.subtitle">
+            Netriun unifies autonomous network operations, secure multi-cloud connectivity,
+            Kubernetes fabric and edge infrastructure in one intelligent control plane.
+        </p>
+
+        <div class="hero-actions">
+            <a href="/products" class="btn-primary" data-i18n="home.primary">Explore Platform</a>
+            <a href="/contact" class="btn-secondary" data-i18n="home.secondary">Talk to an architect</a>
+        </div>
+
+        <div class="metric-row">
+            <div><strong>99.99%</strong><span data-i18n="home.metric1">target uptime</span></div>
+            <div><strong>24/7</strong><span data-i18n="home.metric2">AI operations</span></div>
+            <div><strong>5 min</strong><span data-i18n="home.metric3">edge onboarding</span></div>
+        </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+        <img src="/static/img/network-orbit.svg" alt="">
+    </div>
+
+</section>
+
+<section class="section-intro">
+    <p class="eyebrow" data-i18n="home.stackEyebrow">Platform stack</p>
+    <h2 data-i18n="home.stackTitle">Everything needed to operate modern distributed networks.</h2>
+    <p data-i18n="home.stackText">
+        From discovery to policy, Netriun connects telemetry, automation and security into a calm,
+        observable workflow for infrastructure teams.
+    </p>
+</section>
+
+<section class="cards feature-cards">
+
+    <div class="card">
+        <img src="/static/img/ai-core.svg" alt="" class="card-icon">
+        <h2>Netriun AI</h2>
+        <p data-i18n="home.ai">Autonomous operations that detect drift, explain incidents and recommend safe remediation paths.</p>
+    </div>
+
+    <div class="card">
+        <img src="/static/img/cloud-fabric.svg" alt="" class="card-icon">
+        <h2>Netriun Fabric</h2>
+        <p data-i18n="home.fabric">A programmable network fabric for Kubernetes, hybrid cloud and high-growth edge environments.</p>
+    </div>
+
+    <div class="card">
+        <img src="/static/img/secure-shield.svg" alt="" class="card-icon">
+        <h2>Netriun Secure</h2>
+        <p data-i18n="home.secure">Identity-aware access, encrypted paths and zero-trust policy enforcement across every site.</p>
+    </div>
+
+</section>
+
+<section class="workflow">
+    <div>
+        <p class="eyebrow" data-i18n="home.workflowEyebrow">Operational flow</p>
+        <h2 data-i18n="home.workflowTitle">Observe, decide and deploy with confidence.</h2>
+        <p data-i18n="home.workflowText">
+            Netriun turns noisy infrastructure signals into clear actions. Teams see topology,
+            risk, capacity and change impact before a rollout reaches production.
+        </p>
+    </div>
+
+    <div class="timeline">
+        <div><span>01</span><strong data-i18n="home.step1">Map topology</strong><p data-i18n="home.step1Text">Discover workloads, clusters, circuits and cloud edges automatically.</p></div>
+        <div><span>02</span><strong data-i18n="home.step2">Model intent</strong><p data-i18n="home.step2Text">Translate business requirements into versioned network policies.</p></div>
+        <div><span>03</span><strong data-i18n="home.step3">Automate change</strong><p data-i18n="home.step3Text">Deploy with guardrails, audit trails and live rollback signals.</p></div>
+    </div>
+</section>
+
+{{end}}
