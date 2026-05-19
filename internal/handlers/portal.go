@@ -13,9 +13,11 @@ func PortalHandler(w http.ResponseWriter, r *http.Request) {
 		"web/templates/partials/footer.html",
 	))
 
-	data := PageData{
-		Title: "Customer Portal",
-	}
+	data := NewPageData(
+		"Netriun Customer Portal",
+		"Access the Netriun customer portal for infrastructure status, support, account activity, and cloud-native operations.",
+		"https://netriun.com/portal",
+	)
 
 	tmpl.ExecuteTemplate(w, "base", data)
 }

@@ -1,7 +1,10 @@
 .git
+.gitignore
 .idea
 .vscode
-node_modules
+netriun
 tmp
 *.log
+node_modules
 .env
+.DS_Store

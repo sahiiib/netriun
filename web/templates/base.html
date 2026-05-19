@@ -5,17 +5,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{if .Description}}{{.Description}}{{else}}Netriun helps teams deploy, secure, and scale cloud-native workloads with Kubernetes networking, observability, zero-trust tunnels, and edge connectivity.{{end}}">
+    <meta name="keywords" content="Netriun, Kubernetes networking, cloud-native infrastructure, zero trust networking, Cloudflare tunnel, observability, edge connectivity, GitOps, platform engineering">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Netriun">
+    {{if .Canonical}}<link rel="canonical" href="{{.Canonical}}">{{end}}
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Netriun">
+    <meta property="og:title" content="{{.Title}}">
+    <meta property="og:description" content="{{if .Description}}{{.Description}}{{else}}Deploy, secure, and scale cloud-native workloads with integrated Kubernetes networking, observability, and edge connectivity.{{end}}">
+    {{if .Canonical}}<meta property="og:url" content="{{.Canonical}}">{{end}}
+    <meta property="og:image" content="https://netriun.com/static/img/logo.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{.Title}}">
+    <meta name="twitter:description" content="{{if .Description}}{{.Description}}{{else}}Cloud-native infrastructure with Kubernetes networking, zero-trust tunnels, observability, and edge connectivity.{{end}}">
     <title>{{.Title}}</title>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Netriun",
+        "url": "https://netriun.com/",
+        "logo": "https://netriun.com/static/img/logo.svg",
+        "description": "Cloud-native infrastructure platform for Kubernetes networking, observability, zero-trust tunnels, and edge connectivity."
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="/static/css/dark.css" id="theme-link">
+    <link rel="icon" href="/static/img/logo.svg?v={{.AssetVersion}}" type="image/svg+xml">
+    <link rel="stylesheet" href="/static/css/style.css?v={{.AssetVersion}}">
+    <link rel="stylesheet" href="/static/css/dark.css?v={{.AssetVersion}}" id="theme-link" data-version="{{.AssetVersion}}">
 
-    <script defer src="/static/js/theme.js"></script>
-    <script defer src="/static/js/lang.js"></script>
+    <script defer src="/static/js/theme.js?v={{.AssetVersion}}"></script>
+    <script defer src="/static/js/lang.js?v={{.AssetVersion}}"></script>
+    <script defer src="/static/js/app.js?v={{.AssetVersion}}"></script>
 </head>
 
 <body>

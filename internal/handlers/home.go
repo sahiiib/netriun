@@ -6,7 +6,10 @@ import (
 )
 
 type PageData struct {
-	Title string
+	Title        string
+	Description  string
+	Canonical    string
+	AssetVersion string
 }
 
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
@@ -17,9 +20,11 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 		"web/templates/partials/footer.html",
 	))
 
-	data := PageData{
-		Title: "Netriun",
-	}
+	data := NewPageData(
+		"Netriun | Infrastructure Without Friction",
+		"Deploy, secure, and scale cloud-native workloads with integrated Kubernetes networking, observability, zero-trust tunnels, and edge connectivity.",
+		"https://netriun.com/",
+	)
 
 	tmpl.ExecuteTemplate(w, "base", data)
 }

@@ -66,7 +66,7 @@ spec:
           readinessProbe:
 
             httpGet:
-              path: /
+              path: /healthz
               port: 8088
 
             initialDelaySeconds: 5
@@ -75,7 +75,7 @@ spec:
           livenessProbe:
 
             httpGet:
-              path: /
+              path: /healthz
               port: 8088
 
             initialDelaySeconds: 15

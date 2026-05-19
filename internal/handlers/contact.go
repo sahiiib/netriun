@@ -13,9 +13,11 @@ func ContactHandler(w http.ResponseWriter, r *http.Request) {
 		"web/templates/partials/footer.html",
 	))
 
-	data := PageData{
-		Title: "Contact Netriun",
-	}
+	data := NewPageData(
+		"Contact Netriun",
+		"Contact Netriun to plan secure cloud-native infrastructure, Kubernetes networking, edge tunnels, and observability workflows.",
+		"https://netriun.com/contact",
+	)
 
 	tmpl.ExecuteTemplate(w, "base", data)
 }

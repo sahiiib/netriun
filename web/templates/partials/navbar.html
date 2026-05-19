@@ -1,54 +1,22 @@
 {{define "navbar"}}
 
-<nav class="navbar">
-
-    <div class="logo">
-
-        <a href="/" class="brand-link" aria-label="Netriun home">
-            <svg class="logo-svg" viewBox="0 0 100 100" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-
-                <polygon points="50,5 90,28 90,72 50,95 10,72 10,28"
-                    stroke="currentColor"
-                    stroke-width="6"
-                    fill="none"/>
-
-                <path d="M30,30 L30,70 L70,30 L70,70"
-                    stroke="#6EE7B7"
-                    stroke-width="8"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"/>
-
-                <circle cx="30" cy="30" r="5" fill="#ffffff"/>
-                <circle cx="70" cy="70" r="5" fill="#ffffff"/>
-            </svg>
-
-            <span class="logo-text">
-                Netriun
-            </span>
-        </a>
-
-    </div>
+<nav class="navbar" aria-label="Primary navigation">
+    <a href="/" class="brand-link" aria-label="Netriun home">
+        <svg class="logo-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polygon points="50,5 90,28 90,72 50,95 10,72 10,28" stroke="currentColor" stroke-width="6" fill="none"/>
+            <path d="M30,30 L30,70 L70,30 L70,70" stroke="#6EE7B7" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="30" cy="30" r="5" fill="#ffffff"/>
+            <circle cx="70" cy="70" r="5" fill="#ffffff"/>
+        </svg>
+        <span class="logo-text">Netriun</span>
+    </a>
 
     <ul class="nav-links">
-
-        <li><a href="/" data-i18n="nav.home">Home</a></li>
-
-        <li class="dropdown">
-            <a href="/products" data-i18n="nav.solutions">Solutions</a>
-
-            <div class="dropdown-content">
-                <a href="/products">Netriun Fabric</a>
-                <a href="/products">Netriun AI</a>
-                <a href="/products">Netriun Secure</a>
-                <a href="/products">Netriun Mesh</a>
-            </div>
-        </li>
-
-        <li><a href="/about" data-i18n="nav.about">About</a></li>
-        <li><a href="/contact" data-i18n="nav.contact">Contact</a></li>
-        <li><a href="/portal" data-i18n="nav.portal">Portal</a></li>
-
+        <li><a href="#features" data-i18n="nav.features">Features</a></li>
+        <li><a href="#architecture" data-i18n="nav.architecture">Architecture</a></li>
+        <li><a href="#docs" data-i18n="nav.docs">Docs</a></li>
+        <li><a href="#pricing" data-i18n="nav.pricing">Pricing</a></li>
+        <li><a href="#security" data-i18n="nav.security">Security</a></li>
     </ul>
 
     <div class="nav-actions">
@@ -61,10 +29,9 @@
                 <option value="hy">HY</option>
             </select>
         </label>
-
-        <button class="theme-toggle" type="button" onclick="toggleTheme()" data-i18n="nav.theme">Theme</button>
+        <a href="/portal" class="nav-login" data-i18n="nav.login">Login</a>
+        <a href="/portal" class="nav-cta" data-i18n="nav.startDeploying">Start Deploying</a>
     </div>
-
 </nav>
 
 {{end}}

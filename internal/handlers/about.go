@@ -13,9 +13,11 @@ func AboutHandler(w http.ResponseWriter, r *http.Request) {
 		"web/templates/partials/footer.html",
 	))
 
-	data := PageData{
-		Title: "About Netriun",
-	}
+	data := NewPageData(
+		"About Netriun",
+		"Learn about Netriun, a cloud-native infrastructure platform for secure Kubernetes networking, edge connectivity, and observability.",
+		"https://netriun.com/about",
+	)
 
 	tmpl.ExecuteTemplate(w, "base", data)
 }

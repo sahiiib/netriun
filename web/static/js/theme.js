@@ -1,6 +1,8 @@
 function applyTheme(themeName) {
     const theme = document.getElementById("theme-link");
-    const href = themeName === "light" ? "/static/css/light.css" : "/static/css/dark.css";
+    const version = theme?.dataset.version;
+    const suffix = version ? `?v=${encodeURIComponent(version)}` : "";
+    const href = themeName === "light" ? `/static/css/light.css${suffix}` : `/static/css/dark.css${suffix}`;
 
     theme.setAttribute("href", href);
     localStorage.setItem("netriun-theme", themeName);

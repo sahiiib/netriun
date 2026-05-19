@@ -1,80 +1,387 @@
 {{define "content"}}
 
-<section class="hero">
+<section class="hero landing-section" id="top">
+    <div class="hero-particles" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-    <div class="hero-copy">
-        <p class="eyebrow" data-i18n="home.eyebrow">AI-native networking platform</p>
-
-        <h1 data-i18n="home.title">Engineering Intelligent Networks</h1>
-
-        <p data-i18n="home.subtitle">
-            Netriun unifies autonomous network operations, secure multi-cloud connectivity,
-            Kubernetes fabric and edge infrastructure in one intelligent control plane.
+    <div class="hero-copy reveal">
+        <p class="eyebrow" data-i18n="landing.eyebrow">Cloud-native infrastructure platform</p>
+        <h1 data-i18n="landing.title">Infrastructure Without Friction</h1>
+        <p class="hero-lead" data-i18n="landing.subtitle">
+            Deploy, secure, and scale cloud-native workloads with integrated Kubernetes
+            networking, observability, and edge connectivity.
         </p>
 
         <div class="hero-actions">
-            <a href="/products" class="btn-primary" data-i18n="home.primary">Explore Platform</a>
-            <a href="/contact" class="btn-secondary" data-i18n="home.secondary">Talk to an architect</a>
+            <a href="/portal" class="btn-primary" data-i18n="landing.startBuilding">Start Building</a>
+            <a href="#architecture" class="btn-secondary" data-i18n="landing.viewArchitecture">View Architecture</a>
         </div>
 
-        <div class="metric-row">
-            <div><strong>99.99%</strong><span data-i18n="home.metric1">target uptime</span></div>
-            <div><strong>24/7</strong><span data-i18n="home.metric2">AI operations</span></div>
-            <div><strong>5 min</strong><span data-i18n="home.metric3">edge onboarding</span></div>
+        <div class="hero-status-row" aria-label="Platform status summary">
+            <div><strong>42</strong><span data-i18n="landing.activeClusters">active clusters</span></div>
+            <div><strong>12ms</strong><span data-i18n="landing.tunnelHop">p95 tunnel hop</span></div>
+            <div><strong>99.99%</strong><span data-i18n="landing.slo">control plane SLO</span></div>
         </div>
     </div>
 
-    <div class="hero-visual" aria-hidden="true">
-        <img src="/static/img/network-orbit.svg" alt="">
-    </div>
+    <div class="infra-dashboard reveal" aria-label="Animated infrastructure dashboard preview">
+        <div class="dashboard-topbar">
+            <div>
+                <span class="status-dot"></span>
+                <strong>Netriun Control Plane</strong>
+            </div>
+            <span>live production</span>
+        </div>
 
+        <div class="dashboard-grid">
+            <div class="dash-card cluster-card">
+                <div class="dash-card-head">
+                    <span>Kubernetes clusters</span>
+                    <strong>6</strong>
+                </div>
+                <div class="cluster-map">
+                    <span class="node healthy"></span>
+                    <span class="node healthy"></span>
+                    <span class="node warning"></span>
+                    <span class="node healthy"></span>
+                    <span class="node healthy"></span>
+                    <span class="node healthy"></span>
+                </div>
+            </div>
+
+            <div class="dash-card tunnel-card">
+                <div class="dash-card-head">
+                    <span>Tunnel health</span>
+                    <strong>100%</strong>
+                </div>
+                <div class="tunnel-lines">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </div>
+            </div>
+
+            <div class="dash-card latency-card">
+                <div class="dash-card-head">
+                    <span>Edge latency</span>
+                    <strong>38ms</strong>
+                </div>
+                <div class="latency-bars">
+                    <span style="--h: 38%"></span>
+                    <span style="--h: 58%"></span>
+                    <span style="--h: 44%"></span>
+                    <span style="--h: 72%"></span>
+                    <span style="--h: 54%"></span>
+                    <span style="--h: 82%"></span>
+                    <span style="--h: 63%"></span>
+                </div>
+            </div>
+
+            <div class="dash-card graph-card">
+                <div class="dash-card-head">
+                    <span>Traffic</span>
+                    <strong>8.4Gb/s</strong>
+                </div>
+                <svg viewBox="0 0 280 110" role="img" aria-label="Traffic graph">
+                    <path d="M0 82 C32 38, 55 96, 86 54 S148 38, 184 62 S240 86, 280 26"></path>
+                    <path class="graph-fill" d="M0 110 L0 82 C32 38, 55 96, 86 54 S148 38, 184 62 S240 86, 280 26 L280 110 Z"></path>
+                </svg>
+            </div>
+
+            <div class="dash-card pods-card">
+                <div class="dash-card-head">
+                    <span>Pod metrics</span>
+                    <strong>842</strong>
+                </div>
+                <div class="pod-list">
+                    <span><i></i>api-gateway</span>
+                    <span><i></i>worker-pool</span>
+                    <span><i></i>edge-proxy</span>
+                </div>
+            </div>
+
+            <div class="dash-card node-card">
+                <div class="dash-card-head">
+                    <span>Node health</span>
+                    <strong>98%</strong>
+                </div>
+                <div class="ring-meter"><span></span></div>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="section-intro">
-    <p class="eyebrow" data-i18n="home.stackEyebrow">Platform stack</p>
-    <h2 data-i18n="home.stackTitle">Everything needed to operate modern distributed networks.</h2>
-    <p data-i18n="home.stackText">
-        From discovery to policy, Netriun connects telemetry, automation and security into a calm,
-        observable workflow for infrastructure teams.
-    </p>
+<section class="trust-strip reveal" aria-label="Trusted infrastructure capabilities">
+    <span>Kubernetes Native</span>
+    <span>Cloudflare Connected</span>
+    <span>Zero Trust Ready</span>
+    <span>Multi-Region</span>
+    <span>Production Grade</span>
 </section>
 
-<section class="cards feature-cards">
-
-    <div class="card">
-        <img src="/static/img/ai-core.svg" alt="" class="card-icon">
-        <h2>Netriun AI</h2>
-        <p data-i18n="home.ai">Autonomous operations that detect drift, explain incidents and recommend safe remediation paths.</p>
-    </div>
-
-    <div class="card">
-        <img src="/static/img/cloud-fabric.svg" alt="" class="card-icon">
-        <h2>Netriun Fabric</h2>
-        <p data-i18n="home.fabric">A programmable network fabric for Kubernetes, hybrid cloud and high-growth edge environments.</p>
-    </div>
-
-    <div class="card">
-        <img src="/static/img/secure-shield.svg" alt="" class="card-icon">
-        <h2>Netriun Secure</h2>
-        <p data-i18n="home.secure">Identity-aware access, encrypted paths and zero-trust policy enforcement across every site.</p>
-    </div>
-
-</section>
-
-<section class="workflow">
+<section class="split-section landing-section reveal">
     <div>
-        <p class="eyebrow" data-i18n="home.workflowEyebrow">Operational flow</p>
-        <h2 data-i18n="home.workflowTitle">Observe, decide and deploy with confidence.</h2>
-        <p data-i18n="home.workflowText">
-            Netriun turns noisy infrastructure signals into clear actions. Teams see topology,
-            risk, capacity and change impact before a rollout reaches production.
+        <p class="eyebrow">From drag to velocity</p>
+        <h2>Infrastructure teams should not have to stitch the same platform twice.</h2>
+    </div>
+    <div class="solution-grid">
+        <div class="pain-list">
+            <h3>Common blockers</h3>
+            <p>Complex networking</p>
+            <p>Fragmented observability</p>
+            <p>Slow deployments</p>
+            <p>Insecure edge exposure</p>
+            <p>Manual infrastructure management</p>
+        </div>
+        <div class="solve-card">
+            <h3>How Netriun helps</h3>
+            <p>
+                Netriun combines service networking, edge tunnels, policy, metrics, and
+                deployment automation in one infrastructure-grade control plane.
+            </p>
+            <div class="mini-stack">
+                <span>GitOps</span>
+                <span>Policy</span>
+                <span>Telemetry</span>
+                <span>Edge</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-intro reveal" id="features">
+    <p class="eyebrow">Core platform</p>
+    <h2>Everything needed to deploy, expose, and operate cloud-native systems.</h2>
+</section>
+
+<section class="feature-grid reveal">
+    <article class="feature-card">
+        <span class="feature-icon">K8s</span>
+        <h3>Kubernetes Native</h3>
+        <p>Deploy and manage workloads seamlessly across clusters.</p>
+    </article>
+    <article class="feature-card">
+        <span class="feature-icon">ZT</span>
+        <h3>Zero Trust Networking</h3>
+        <p>Secure infrastructure exposure using edge tunnels and service isolation.</p>
+    </article>
+    <article class="feature-card">
+        <span class="feature-icon">RT</span>
+        <h3>Real-Time Observability</h3>
+        <p>Integrated Prometheus and Grafana monitoring.</p>
+    </article>
+    <article class="feature-card">
+        <span class="feature-icon">ED</span>
+        <h3>Edge Connectivity</h3>
+        <p>Global traffic acceleration through Cloudflare edge routing.</p>
+    </article>
+    <article class="feature-card">
+        <span class="feature-icon">IaC</span>
+        <h3>Infrastructure Automation</h3>
+        <p>Declarative deployments with GitOps workflows.</p>
+    </article>
+    <article class="feature-card">
+        <span class="feature-icon">HA</span>
+        <h3>High Availability</h3>
+        <p>Resilient multi-node architecture with automated recovery.</p>
+    </article>
+</section>
+
+<section class="architecture-section landing-section reveal" id="architecture">
+    <div class="section-copy">
+        <p class="eyebrow">Reference architecture</p>
+        <h2>A clear path from user traffic to services.</h2>
+        <p>
+            Netriun wraps the moving parts of a production Kubernetes platform into a
+            visible, policy-aware flow from edge ingress to microservice telemetry.
         </p>
     </div>
 
-    <div class="timeline">
-        <div><span>01</span><strong data-i18n="home.step1">Map topology</strong><p data-i18n="home.step1Text">Discover workloads, clusters, circuits and cloud edges automatically.</p></div>
-        <div><span>02</span><strong data-i18n="home.step2">Model intent</strong><p data-i18n="home.step2Text">Translate business requirements into versioned network policies.</p></div>
-        <div><span>03</span><strong data-i18n="home.step3">Automate change</strong><p data-i18n="home.step3Text">Deploy with guardrails, audit trails and live rollback signals.</p></div>
+    <div class="architecture-diagram" aria-label="Infrastructure architecture diagram">
+        <div class="arch-node">Users</div>
+        <div class="arch-link"></div>
+        <div class="arch-node">Cloudflare Edge</div>
+        <div class="arch-link"></div>
+        <div class="arch-node">Tunnel Layer</div>
+        <div class="arch-link"></div>
+        <div class="arch-node">Ingress Gateway</div>
+        <div class="arch-link"></div>
+        <div class="arch-node wide">Kubernetes Cluster</div>
+        <div class="arch-services">
+            <span>Istio</span>
+            <span>Calico</span>
+            <span>Prometheus</span>
+            <span>Grafana</span>
+            <span>Redis</span>
+            <span>PostgreSQL</span>
+        </div>
+        <div class="arch-microservices">
+            <span>API</span>
+            <span>Workers</span>
+            <span>Jobs</span>
+        </div>
+    </div>
+</section>
+
+<section class="metrics-section reveal">
+    <div class="metric-tile">
+        <strong data-counter="99.99">99.99</strong>
+        <span>% uptime</span>
+    </div>
+    <div class="metric-tile">
+        <strong data-counter="50">50</strong>
+        <span>ms edge latency</span>
+    </div>
+    <div class="metric-tile">
+        <strong data-counter="24">24</strong>
+        <span>regions ready</span>
+    </div>
+    <div class="metric-tile">
+        <strong data-counter="100">100</strong>
+        <span>% real-time telemetry</span>
+    </div>
+</section>
+
+<section class="developer-section landing-section reveal" id="docs">
+    <div class="code-panel">
+        <div class="code-tabs">
+            <span>deployment.yaml</span>
+            <span>netriun</span>
+        </div>
+        <pre><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netriun-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: netriun-api
+  template:
+    spec:
+      containers:
+        - name: api
+          image: registry.netriun.io/api:stable</code></pre>
+    </div>
+    <div class="dev-preview">
+        <p class="eyebrow">Developer experience</p>
+        <h2>Ship with declarative workflows and operational context.</h2>
+        <p>
+            Teams can move from manifest to rollout while Netriun tracks edge exposure,
+            tunnel status, pod health, and service telemetry in the same workflow.
+        </p>
+        <div class="deploy-console">
+            <span>git push origin main</span>
+            <span>ci pipeline passed</span>
+            <span>kubernetes rollout healthy</span>
+            <span>edge route active</span>
+        </div>
+    </div>
+</section>
+
+<section class="security-section landing-section reveal" id="security">
+    <div class="section-copy">
+        <p class="eyebrow">Security model</p>
+        <h2>Built for private services, public edges, and regulated teams.</h2>
+    </div>
+    <div class="security-grid">
+        <article><h3>Zero Trust</h3><p>Identity-aware access paths for every exposed service.</p></article>
+        <article><h3>TLS Everywhere</h3><p>Encrypted service-to-service and edge-to-origin transport.</p></article>
+        <article><h3>Tunnel Encryption</h3><p>Private origin connectivity without opening broad ingress.</p></article>
+        <article><h3>Service Isolation</h3><p>Scoped routes, namespaces, and policy boundaries by default.</p></article>
+        <article><h3>RBAC</h3><p>Role-based controls for operators, developers, and auditors.</p></article>
+        <article><h3>Network Policies</h3><p>Declarative rules that travel with workloads.</p></article>
+    </div>
+</section>
+
+<section class="workflow-section landing-section reveal">
+    <div class="section-copy">
+        <p class="eyebrow">Deployment workflow</p>
+        <h2>From commit to observable edge route.</h2>
+    </div>
+    <div class="workflow-rail">
+        <div><span>01</span><strong>Push Code</strong></div>
+        <div><span>02</span><strong>CI/CD</strong></div>
+        <div><span>03</span><strong>Kubernetes Deploy</strong></div>
+        <div><span>04</span><strong>Edge Exposure</strong></div>
+        <div><span>05</span><strong>Observability</strong></div>
+    </div>
+</section>
+
+<section class="use-case-section landing-section reveal">
+    <div class="section-copy">
+        <p class="eyebrow">Use cases</p>
+        <h2>One platform for the teams building modern infrastructure.</h2>
+    </div>
+    <div class="use-case-grid">
+        <article>SaaS Platforms</article>
+        <article>Kubernetes Labs</article>
+        <article>Enterprise Infrastructure</article>
+        <article>Internal Developer Platforms</article>
+        <article>Edge Applications</article>
+        <article>Hybrid Cloud</article>
+    </div>
+</section>
+
+<section class="testimonial-section landing-section reveal">
+    <blockquote>
+        "Netriun simplified our Kubernetes networking dramatically while giving our team
+        a clearer view of edge exposure and service health."
+    </blockquote>
+    <span>Platform Engineering Lead, Series B SaaS</span>
+</section>
+
+<section class="pricing-section landing-section reveal" id="pricing">
+    <div class="section-copy centered">
+        <p class="eyebrow">Pricing</p>
+        <h2>Start small. Scale into enterprise infrastructure.</h2>
+    </div>
+    <div class="pricing-grid">
+        <article>
+            <h3>Community</h3>
+            <strong>Free</strong>
+            <p>For labs, prototypes, and small Kubernetes environments.</p>
+            <a href="/portal">Start Deploying</a>
+        </article>
+        <article class="featured-price">
+            <h3>Pro</h3>
+            <strong>Teams</strong>
+            <p>Automation, observability, tunnel workflows, and team controls.</p>
+            <a href="/contact">Talk to Sales</a>
+        </article>
+        <article>
+            <h3>Enterprise</h3>
+            <strong>Dedicated</strong>
+            <p>Dedicated infrastructure features, compliance support, and SLAs.</p>
+            <a href="/contact">Contact Us</a>
+        </article>
+    </div>
+</section>
+
+<section class="docs-cta landing-section reveal">
+    <div>
+        <p class="eyebrow">Documentation</p>
+        <h2>Explore the platform before you deploy.</h2>
+    </div>
+    <div class="docs-grid">
+        <span>API docs</span>
+        <span>Helm charts</span>
+        <span>Kubernetes guides</span>
+        <span>Tunnel setup</span>
+        <span>Security model</span>
+    </div>
+</section>
+
+<section class="final-cta reveal">
+    <h2>Build Modern Infrastructure Faster</h2>
+    <div class="hero-actions">
+        <a href="/portal" class="btn-primary">Start Deploying</a>
+        <a href="#docs" class="btn-secondary">Read Docs</a>
     </div>
 </section>
 

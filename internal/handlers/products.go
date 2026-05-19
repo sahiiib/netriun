@@ -13,9 +13,11 @@ func ProductsHandler(w http.ResponseWriter, r *http.Request) {
 		"web/templates/partials/footer.html",
 	))
 
-	data := PageData{
-		Title: "Products",
-	}
+	data := NewPageData(
+		"Netriun Products",
+		"Explore Netriun products for Kubernetes networking, zero-trust service exposure, infrastructure automation, and multi-cloud operations.",
+		"https://netriun.com/products",
+	)
 
 	tmpl.ExecuteTemplate(w, "base", data)
 }
