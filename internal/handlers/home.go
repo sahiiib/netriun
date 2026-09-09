@@ -18,6 +18,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 		"web/templates/home.html",
 		"web/templates/partials/navbar.html",
 		"web/templates/partials/footer.html",
+		"web/templates/partials/products.html",
 	))
 
 	data := NewPageData(

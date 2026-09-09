@@ -1,5 +1,6 @@
 const translations = {
     en: {
+        "nav.products": "Products",
         "nav.home": "Home",
         "nav.solutions": "Solutions",
         "nav.about": "About",
@@ -84,6 +85,7 @@ const translations = {
         "footer.company": "Company"
     },
     de: {
+        "nav.products": "Produkte",
         "nav.home": "Start",
         "nav.solutions": "Losungen",
         "nav.about": "Uber uns",
@@ -168,6 +170,7 @@ const translations = {
         "footer.company": "Unternehmen"
     },
     ru: {
+        "nav.products": "Продукты",
         "nav.home": "Главная",
         "nav.solutions": "Решения",
         "nav.about": "О нас",
@@ -252,6 +255,7 @@ const translations = {
         "footer.company": "Компания"
     },
     hy: {
+        "nav.products": "Ապրանքներ",
         "nav.home": "Գլխավոր",
         "nav.solutions": "Լուծումներ",
         "nav.about": "Մեր մասին",

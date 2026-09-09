@@ -11,6 +11,7 @@ func ProductsHandler(w http.ResponseWriter, r *http.Request) {
 		"web/templates/products.html",
 		"web/templates/partials/navbar.html",
 		"web/templates/partials/footer.html",
+		"web/templates/partials/products.html",
 	))
 
 	data := NewPageData(

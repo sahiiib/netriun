@@ -1,0 +1,9 @@
+
+# Local credentials and environment files
+.env
+.env.*
+!.env.example
+deployments/k8s/*secret*.yaml
+!deployments/k8s/*.example.yaml
+web/static/img/key
+web/static/img/name-list

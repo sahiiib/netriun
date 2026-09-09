@@ -1016,6 +1016,26 @@ pre {
     gap: 18px;
 }
 
+.products-section {
+    padding-block: 64px;
+    scroll-margin-top: 100px;
+}
+
+.products-section .section-copy {
+    margin-bottom: 28px;
+}
+
+.product-link {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+.product-link:hover,
+.product-link:focus-visible {
+    color: var(--text);
+    text-decoration-thickness: 3px;
+}
+
 .product-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
 }

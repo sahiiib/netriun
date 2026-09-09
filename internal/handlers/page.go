@@ -1,6 +1,6 @@
 package handlers
 
-const assetVersion = "20260519-2"
+const assetVersion = "20260909-1"
 
 func NewPageData(title, description, canonical string) PageData {
 	return PageData{

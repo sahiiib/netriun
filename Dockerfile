@@ -5,7 +5,9 @@ WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
 
-COPY . .
+COPY cmd ./cmd
+COPY internal ./internal
+COPY web ./web
 
 RUN go build -o netriun ./cmd/server
 
