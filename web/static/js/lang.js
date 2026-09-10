@@ -1,5 +1,11 @@
 const translations = {
     en: {
+        "products.comingSoon": "Coming soon",
+        "partners.title": "Our Partners",
+        "partners.pending": "Partners will be announced soon.",
+        "about.ownershipTitle": "Brand ownership",
+        "about.ownershipText": "Netriun is a brand owned by Bamshi LLC, a company based in Yerevan, Armenia.",
+
         "nav.products": "Products",
         "nav.home": "Home",
         "nav.solutions": "Solutions",
@@ -85,6 +91,12 @@ const translations = {
         "footer.company": "Company"
     },
     de: {
+        "products.comingSoon": "Demnächst verfügbar",
+        "partners.title": "Unsere Partner",
+        "partners.pending": "Unsere Partner werden in Kürze bekannt gegeben.",
+        "about.ownershipTitle": "Markeninhaber",
+        "about.ownershipText": "Netriun ist eine Marke von Bamshi LLC, einem Unternehmen mit Sitz in Jerewan, Armenien.",
+
         "nav.products": "Produkte",
         "nav.home": "Start",
         "nav.solutions": "Losungen",
@@ -170,6 +182,12 @@ const translations = {
         "footer.company": "Unternehmen"
     },
     ru: {
+        "products.comingSoon": "Скоро",
+        "partners.title": "Наши партнёры",
+        "partners.pending": "Наши партнёры будут объявлены в ближайшее время.",
+        "about.ownershipTitle": "Владелец бренда",
+        "about.ownershipText": "Netriun — бренд, принадлежащий компании Bamshi LLC, расположенной в Ереване, Армения.",
+
         "nav.products": "Продукты",
         "nav.home": "Главная",
         "nav.solutions": "Решения",
@@ -255,6 +273,12 @@ const translations = {
         "footer.company": "Компания"
     },
     hy: {
+        "products.comingSoon": "Շուտով",
+        "partners.title": "Մեր գործընկերները",
+        "partners.pending": "Մեր գործընկերները կհայտարարվեն շուտով։",
+        "about.ownershipTitle": "Ապրանքանիշի սեփականատեր",
+        "about.ownershipText": "Netriun-ը Bamshi LLC ընկերությանը պատկանող ապրանքանիշ է։ Ընկերությունը գտնվում է Երևանում, Հայաստան։",
+
         "nav.products": "Ապրանքներ",
         "nav.home": "Գլխավոր",
         "nav.solutions": "Լուծումներ",
