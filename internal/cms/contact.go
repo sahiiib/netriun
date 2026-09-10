@@ -72,7 +72,7 @@ func (a *Admin) Contact(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	status := "received"
-	if os.Getenv("SMTP_HOST") != "" {
+	if MailConfigured() {
 		if sendMail(in, recipient) == nil {
 			status = "emailed"
 		} else {
@@ -138,4 +138,14 @@ func sendMail(in ContactInput, to string) error {
 		return err
 	}
 	return client.Quit()
+}
+
+// MailConfigured avoids attempting delivery when only part of the SMTP settings exists.
+func MailConfigured() bool {
+	for _, key := range []string{"SMTP_HOST", "SMTP_FROM", "SMTP_USERNAME", "SMTP_PASSWORD"} {
+		if strings.TrimSpace(os.Getenv(key)) == "" {
+			return false
+		}
+	}
+	return true
 }

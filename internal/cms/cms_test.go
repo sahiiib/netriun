@@ -150,3 +150,17 @@ func TestEditorIntegration(t *testing.T) {
 		t.Fatal("revoked session works")
 	}
 }
+
+func TestIncompleteSMTPIsDisabled(t *testing.T) {
+	t.Setenv("SMTP_HOST", "smtp.gmail.com")
+	t.Setenv("SMTP_FROM", "test@example.com")
+	t.Setenv("SMTP_USERNAME", "test@example.com")
+	t.Setenv("SMTP_PASSWORD", "")
+	if MailConfigured() {
+		t.Fatal("incomplete SMTP enabled")
+	}
+	t.Setenv("SMTP_PASSWORD", "dummy-app-password")
+	if !MailConfigured() {
+		t.Fatal("complete SMTP disabled")
+	}
+}

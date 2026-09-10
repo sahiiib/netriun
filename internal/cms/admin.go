@@ -11,7 +11,6 @@ import (
 	"io"
 	"net"
 	"net/http"
-	"os"
 	"strings"
 	"time"
 )
@@ -144,7 +143,7 @@ func (a *Admin) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	}
 	switch {
 	case path == "/api/session" && r.Method == "GET":
-		reply(w, 200, map[string]any{"csrf": csrf, "emailConfigured": os.Getenv("SMTP_HOST") != ""})
+		reply(w, 200, map[string]any{"csrf": csrf, "emailConfigured": MailConfigured()})
 	case path == "/api/logout" && r.Method == "POST":
 		if _, err := a.Store.DB.Exec(r.Context(), `DELETE FROM admin_sessions WHERE token=$1`, key); err != nil {
 			fail(w, 503, "Unable to sign out")

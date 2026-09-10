@@ -109,7 +109,11 @@ access to the files. Do not commit database dumps.
 ### Contact email
 
 All three default recipients are `s.amrei@netriun.com`; edit them in the panel.
-Messages are always stored in the inbox. Without SMTP they are marked
+Gmail settings are `smtp.gmail.com:587`, with `s.amrei@netriun.com` as the
+username and sender. Use a Google App Password in `SMTP_PASSWORD`; never use
+the account password. See https://support.google.com/mail/answer/185833.
+
+Messages are always stored in the inbox. Until all SMTP credentials are set they are marked
 `received`, not claimed to have been emailed. To enable mail delivery, add
 `SMTP_HOST`, `SMTP_PORT`, `SMTP_USERNAME`, `SMTP_PASSWORD` and `SMTP_FROM` to
 the local editor Secret, apply it, and restart the web deployment. Port 587
