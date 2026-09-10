@@ -13,3 +13,7 @@ node_modules
 deployments
 web/static/img/key
 web/static/img/name-list
+
+# Local database backups
+*.dump
+*.dump.tmp

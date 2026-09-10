@@ -1,0 +1,56 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: netriun-editor-backup
+  namespace: netriun
+spec:
+  schedule: "15 2 * * *"
+  timeZone: Asia/Yerevan
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 2
+  failedJobsHistoryLimit: 3
+  jobTemplate:
+    spec:
+      backoffLimit: 2
+      template:
+        metadata:
+          labels:
+            app: netriun-editor-backup
+        spec:
+          restartPolicy: OnFailure
+          automountServiceAccountToken: false
+          nodeSelector:
+            kubernetes.io/hostname: k8s-node01
+          containers:
+            - name: backup
+              image: postgres:17-alpine
+              command: [sh, -ec]
+              args:
+                - |
+                  umask 077
+                  target="/backups/netriun-$(date +%Y%m%d-%H%M%S).dump"
+                  pg_dump -Fc -h netriun-editor-postgres -U netriun -d netriun -f "$target.tmp"
+                  pg_restore --list "$target.tmp" >/dev/null
+                  mv "$target.tmp" "$target"
+                  find /backups -name 'netriun-*.dump' -mtime +14 -delete
+              env:
+                - name: PGPASSWORD
+                  valueFrom:
+                    secretKeyRef:
+                      name: netriun-editor-secret
+                      key: POSTGRES_PASSWORD
+              volumeMounts:
+                - name: backups
+                  mountPath: /backups
+              resources:
+                requests:
+                  cpu: 50m
+                  memory: 64Mi
+                limits:
+                  cpu: 500m
+                  memory: 256Mi
+          volumes:
+            - name: backups
+              hostPath:
+                path: /var/lib/netriun-web/backups
+                type: DirectoryOrCreate

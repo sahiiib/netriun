@@ -1,0 +1,101 @@
+{
+  "products": [
+    {
+      "id": "fabric",
+      "name": {
+        "en": "Netriun Fabric"
+      },
+      "description": {
+        "en": "Build resilient cloud and data center fabrics with automated routing, service discovery and capacity insight.",
+        "de": "Erstellen Sie belastbare Cloud- und Rechenzentrums-Fabrics mit automatisiertem Routing, Service Discovery und Kapazitatseinblick.",
+        "ru": "Создавайте устойчивые cloud и data center fabrics с автоматической маршрутизацией, service discovery и анализом емкости.",
+        "hy": "Կառուցեք կայուն cloud եւ data center fabrics ավտոմատ routing-ով, service discovery-ով եւ capacity insight-ով։"
+      },
+      "image": "/static/img/cloud-fabric.svg",
+      "url": "",
+      "status": "coming-soon",
+      "date": ""
+    },
+    {
+      "id": "mesh",
+      "name": {
+        "en": "Netriun Mesh"
+      },
+      "description": {
+        "en": "Connect Kubernetes clusters, branch sites and edge devices through encrypted, policy-aware paths.",
+        "de": "Verbinden Sie Kubernetes-Cluster, Standorte und Edge-Gerate uber verschlusselte, richtlinienbewusste Pfade.",
+        "ru": "Соединяйте Kubernetes-кластеры, филиалы и edge-устройства через зашифрованные пути с учетом политик.",
+        "hy": "Միացրեք Kubernetes clusters, branch sites եւ edge devices կոդավորված, policy-aware ուղիներով։"
+      },
+      "image": "/static/img/network-orbit.svg",
+      "url": "",
+      "status": "coming-soon",
+      "date": ""
+    },
+    {
+      "id": "secure",
+      "name": {
+        "en": "Netriun Secure"
+      },
+      "description": {
+        "en": "Apply zero-trust access, segmentation and SASE controls without slowing infrastructure teams down.",
+        "de": "Wenden Sie Zero-Trust-Zugriff, Segmentierung und SASE-Kontrollen an, ohne Infrastrukturteams auszubremsen.",
+        "ru": "Применяйте zero-trust доступ, сегментацию и SASE-контроли без замедления инфраструктурных команд.",
+        "hy": "Կիրառեք zero-trust access, segmentation եւ SASE controls առանց ենթակառուցվածքային թիմերը դանդաղեցնելու։"
+      },
+      "image": "/static/img/secure-shield.svg",
+      "url": "",
+      "status": "coming-soon",
+      "date": ""
+    },
+    {
+      "id": "nexus",
+      "name": {
+        "en": "Netriun Nexus"
+      },
+      "description": {
+        "en": "Orchestrate multi-cloud changes from one control plane with approval workflows and live health checks.",
+        "de": "Orchestrieren Sie Multi-Cloud-Anderungen aus einer Steuerungsebene mit Freigaben und Live-Health-Checks.",
+        "ru": "Оркестрируйте multi-cloud изменения из одной панели с согласованиями и live health checks.",
+        "hy": "Orchestrate արեք multi-cloud փոփոխությունները մեկ control plane-ից approvals-ով եւ live health checks-ով։"
+      },
+      "image": "/static/img/ai-core.svg",
+      "url": "https://nexus.netriun.com/",
+      "status": "published",
+      "date": ""
+    }
+  ],
+  "news": [],
+  "partners": [],
+  "about": {
+    "lead": {
+      "en": "Netriun builds AI-native networking infrastructure for enterprises, cloud providers and distributed edge environments.",
+      "de": "Netriun entwickelt KI-native Netzwerkinfrastruktur fur Unternehmen, Cloud-Anbieter und verteilte Edge-Umgebungen.",
+      "ru": "Netriun создает AI-native сетевую инфраструктуру для предприятий, cloud-провайдеров и распределенных edge-сред.",
+      "hy": "Netriun-ը կառուցում է AI-native ցանցային ենթակառուցվածք ձեռնարկությունների, cloud providers-ի եւ բաշխված edge միջավայրերի համար։"
+    },
+    "ownership": {
+      "en": "Netriun is a brand owned by Bamshi LLC, a company based in Yerevan, Armenia.",
+      "de": "Netriun ist eine Marke von Bamshi LLC, einem Unternehmen mit Sitz in Jerewan, Armenien.",
+      "ru": "Netriun — бренд, принадлежащий компании Bamshi LLC, расположенной в Ереване, Армения.",
+      "hy": "Netriun-ը Bamshi LLC ընկերությանը պատկանող ապրանքանիշ է։ Ընկերությունը գտնվում է Երևանում, Հայաստան։"
+    },
+    "mission": {
+      "en": "We help infrastructure teams move from reactive operations to intelligent, intent-driven networks that adapt with the business.",
+      "de": "Wir helfen Infrastrukturteams, von reaktivem Betrieb zu intelligenten, absichtsgesteuerten Netzwerken zu wechseln, die mit dem Unternehmen wachsen.",
+      "ru": "Мы помогаем инфраструктурным командам перейти от реактивной эксплуатации к интеллектуальным intent-driven сетям, которые меняются вместе с бизнесом.",
+      "hy": "Մենք օգնում ենք ենթակառուցվածքային թիմերին անցնել reactive operations-ից դեպի խելացի, intent-driven ցանցեր, որոնք հարմարվում են բիզնեսին։"
+    },
+    "approach": {
+      "en": "Netriun combines deep telemetry, automation guardrails and human-readable AI recommendations so teams can trust every change.",
+      "de": "Netriun kombiniert tiefe Telemetrie, Automatisierungsleitplanken und verstandliche KI-Empfehlungen, damit Teams jeder Anderung vertrauen konnen.",
+      "ru": "Netriun объединяет глубокую телеметрию, автоматизационные guardrails и понятные AI-рекомендации, чтобы команды доверяли каждому изменению.",
+      "hy": "Netriun-ը համադրում է խոր telemetry, automation guardrails եւ մարդուն հասկանալի AI recommendations, որպեսզի թիմերը վստահեն յուրաքանչյուր փոփոխությանը։"
+    }
+  },
+  "recipients": {
+    "sales": "s.amrei@netriun.com",
+    "support": "s.amrei@netriun.com",
+    "info": "s.amrei@netriun.com"
+  }
+}

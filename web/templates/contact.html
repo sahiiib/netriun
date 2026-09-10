@@ -1,27 +1,12 @@
 {{define "content"}}
-
-<section class="page">
-
-<p class="eyebrow" data-i18n="contact.eyebrow">Start a conversation</p>
-<h1 data-i18n="contact.title">Contact Netriun</h1>
-<p class="page-lead" data-i18n="contact.lead">
-Tell us about your network, cloud or edge goals. We will help map the fastest path to a secure intelligent fabric.
-</p>
-
-<form class="contact-form">
-
-<input type="text" placeholder="Your Name" data-i18n-placeholder="contact.name">
-
-<input type="email" placeholder="Email" data-i18n-placeholder="contact.email">
-
-<textarea placeholder="Message" data-i18n-placeholder="contact.message"></textarea>
-
-<button type="submit" data-i18n="contact.submit">
-Send Message
-</button>
-
-</form>
-
-</section>
-
+<section class="page"><p class="eyebrow" data-i18n="contact.eyebrow">Start a conversation</p><h1 data-i18n="contact.title">Contact Netriun</h1><p class="page-lead" data-i18n="contact.lead">Tell us about your network, cloud or edge goals.</p>
+<div class="about-grid"><form id="contact-form" class="contact-form" action="/api/contact" method="post">
+<label>Name<input name="name" autocomplete="name" required minlength="2" maxlength="100"></label>
+<label>Email<input name="email" type="email" autocomplete="email" required maxlength="254"></label>
+<label>Company (optional)<input name="company" autocomplete="organization" maxlength="200"></label>
+<label>Topic<select name="topic" required><option value="info">General information</option><option value="sales">Sales</option><option value="support">Support</option></select></label>
+<label>Message<textarea name="message" required minlength="10" maxlength="10000" rows="6"></textarea></label>
+<div class="contact-trap" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>
+<p class="contact-privacy">Your details will be used to respond to your enquiry.</p><button type="submit" data-i18n="contact.submit">Send Message</button><p id="contact-result" role="status" aria-live="polite"></p><noscript>Please enable JavaScript to use this form, or email us directly.</noscript></form>
+<aside class="glass-panel"><h2>Get in touch</h2><p>Sales: <a href="mailto:{{index .Content.Recipients "sales"}}">{{index .Content.Recipients "sales"}}</a></p><p>Support: <a href="mailto:{{index .Content.Recipients "support"}}">{{index .Content.Recipients "support"}}</a></p><p>Info: <a href="mailto:{{index .Content.Recipients "info"}}">{{index .Content.Recipients "info"}}</a></p><p>Bamshi LLC<br>Yerevan, Armenia</p></aside></div></section><script defer src="/static/js/contact.js?v={{.AssetVersion}}"></script>
 {{end}}

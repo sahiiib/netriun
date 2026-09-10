@@ -14,6 +14,7 @@ RUN go build -o netriun ./cmd/server
 FROM alpine:latest
 
 WORKDIR /app
+RUN apk add --no-cache ca-certificates
 RUN addgroup -S netriun && adduser -S netriun -G netriun
 
 COPY --from=builder --chown=netriun:netriun /app/netriun .

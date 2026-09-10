@@ -32,6 +32,8 @@ spec:
 
     spec:
 
+      automountServiceAccountToken: false
+
       containers:
 
         - name: netriun-web
@@ -43,7 +45,13 @@ spec:
           ports:
             - containerPort: 8088
 
+          envFrom:
+            - secretRef:
+                name: netriun-editor-secret
+
           env:
+            - name: PUBLIC_ORIGIN
+              value: "https://netriun.com"
             - name: PORT
               value: "8088"
 
@@ -66,7 +74,7 @@ spec:
           readinessProbe:
 
             httpGet:
-              path: /healthz
+              path: /readyz
               port: 8088
 
             initialDelaySeconds: 5

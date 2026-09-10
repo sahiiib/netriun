@@ -385,15 +385,19 @@ function switchLanguage(lang) {
 
     document.documentElement.setAttribute("lang", lang);
     localStorage.setItem("netriun-lang", lang);
+    document.cookie = `netriun-language=${encodeURIComponent(lang)}; Path=/; Max-Age=31536000; SameSite=Lax`;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
     const select = document.getElementById("language-select");
-    const savedLanguage = localStorage.getItem("netriun-lang") || "en";
+    const savedLanguage = document.documentElement.lang || "en";
 
     if (select) {
         select.value = savedLanguage;
-        select.addEventListener("change", (event) => switchLanguage(event.target.value));
+        select.addEventListener("change", (event) => {
+            switchLanguage(event.target.value);
+            location.reload();
+        });
     }
 
     switchLanguage(savedLanguage);

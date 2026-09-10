@@ -1,0 +1,7 @@
+{{define "content"}}
+<section class="page"><p class="eyebrow">Updates</p><h1>Netriun News</h1>
+{{$shown := false}}{{range .Content.News}}{{if eq .Status "published"}}{{$shown = true}}
+<article class="glass-panel news-article" id="{{.ID}}"><h2>{{local .Name}}</h2>{{if .Date}}<time>{{.Date}}</time>{{end}}
+{{if .Image}}<img class="news-image" src="{{.Image}}" alt="" loading="lazy">{{end}}<p class="content-text">{{local .Description}}</p></article>
+{{end}}{{end}}{{if not $shown}}<p>News and updates will be announced here.</p>{{end}}
+</section>{{end}}

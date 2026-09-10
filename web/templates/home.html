@@ -386,10 +386,32 @@ spec:
     </div>
 </section>
 
+<section class="landing-section news-section" aria-labelledby="news-heading">
+    <h2 id="news-heading">Latest news</h2>
+    {{$newsShown := false}}
+    <div class="product-grid">
+    {{range .Content.News}}{{if eq .Status "published"}}{{$newsShown = true}}
+        <article class="product-card"><h3><a href="/news#{{.ID}}">{{local .Name}}</a></h3>{{if .Date}}<time>{{.Date}}</time>{{end}}</article>
+    {{end}}{{end}}
+    </div>
+    {{if not $newsShown}}<p>News and updates will be announced here.</p>{{end}}
+    <p><a href="/news">All news →</a></p>
+</section>
+
 <section class="partners-section landing-section reveal" id="partners" aria-labelledby="partners-heading">
     <div class="partners-panel glass-panel">
         <h2 id="partners-heading" data-i18n="partners.title">Our Partners</h2>
-        <p data-i18n="partners.pending">Partners will be announced soon.</p>
+        {{$shown := false}}
+        <div class="product-grid">
+        {{range .Content.Partners}}{{if eq .Status "published"}}{{$shown = true}}
+            <article class="product-card">
+                {{if .Image}}<img src="{{.Image}}" class="card-icon" alt="" loading="lazy">{{end}}
+                <h3>{{if .URL}}<a href="{{.URL}}">{{local .Name}}</a>{{else}}{{local .Name}}{{end}}</h3>
+                <p class="content-text">{{local .Description}}</p>
+            </article>
+        {{end}}{{end}}
+        </div>
+        {{if not $shown}}<p data-i18n="partners.pending">Partners will be announced soon.</p>{{end}}
     </div>
 </section>
 
