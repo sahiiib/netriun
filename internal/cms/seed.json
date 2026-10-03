@@ -63,6 +63,25 @@
       "url": "https://nexus.netriun.com/",
       "status": "published",
       "date": ""
+    },
+    {
+      "id": "berth",
+      "name": {
+        "en": "Netriun Berth",
+        "de": "Netriun Berth",
+        "ru": "Netriun Berth",
+        "hy": "Netriun Berth"
+      },
+      "description": {
+        "en": "Manage Docker containers and monitor Linux hosts across offices, data centers, and clouds from one platform. Designed for operations teams and MSPs, with SaaS and self-hosted editions planned.",
+        "de": "Docker-Container verwalten und Linux-Hosts an Bürostandorten, in Rechenzentren und Clouds zentral überwachen. Für Betriebsteams und MSPs konzipiert; SaaS- und selbst gehostete Editionen sind geplant.",
+        "ru": "Управляйте контейнерами Docker и отслеживайте состояние Linux-хостов в офисах, дата-центрах и облаках с единой платформы. Решение для эксплуатационных команд и MSP; планируются SaaS-версия и версия для собственной инфраструктуры.",
+        "hy": "Կառավարեք Docker կոնտեյներները և հետևեք Linux հոսթերի վիճակին գրասենյակներում, տվյալների կենտրոններում և ամպային միջավայրերում՝ մեկ հարթակից։ Նախատեսված է գործառնական թիմերի և MSP-ների համար․ նախատեսվում են SaaS և սեփական ենթակառուցվածքում տեղակայվող տարբերակներ։"
+      },
+      "image": "/static/img/berth.svg",
+      "url": "https://berth.netriun.com",
+      "status": "coming-soon",
+      "date": ""
     }
   ],
   "news": [],
