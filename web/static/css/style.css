@@ -1330,3 +1330,43 @@ pre {
 .contact-form select option { background: var(--bg); }
 .contact-form button:disabled { opacity: .6; cursor: wait; }
 .contact-privacy { color: var(--muted); font-size: 13px; }
+
+/* Shared appearance controls and company page. */
+:root { color-scheme: dark; }
+.language-menu:focus-within { outline: 2px solid var(--blue); outline-offset: 3px; }
+.language-menu option { color: var(--text); background: var(--bg); }
+.navbar { grid-template-columns: auto 1fr; }
+.nav-links { grid-column: 1 / -1; grid-row: 2; flex-wrap: wrap; gap: 12px 26px; }
+.nav-actions { justify-self: end; }
+.about-hero { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); align-items: center; gap: 64px; }
+.about-page h1 { font-size: clamp(38px, 5vw, 68px); max-width: 760px; line-height: 1.08; }
+.about-page p { line-height: 1.8; color: var(--muted); }
+.about-page .eyebrow { color: var(--teal); }
+.about-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.about-company { border-top: 3px solid var(--teal); }
+.about-company h2 { font-size: 25px; }
+.about-location { border-top: 1px solid var(--line); padding-top: 20px; margin-top: 24px; font-size: 14px; color: var(--muted-strong); }
+.about-location span { color: var(--teal); margin-right: 8px; }
+.about-principles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 64px; }
+.about-principles article { padding: 32px; }
+.about-number { color: var(--teal); font: 14px ui-monospace, monospace; }
+.about-focus { margin-block: 72px; }
+.about-focus h2 { font-size: clamp(28px, 3vw, 40px); }
+.about-focus-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; margin-top: 36px; }
+.about-focus-grid article { border-top: 1px solid var(--line-strong); padding-top: 12px; }
+.about-contact { display: flex; align-items: center; justify-content: space-between; gap: 28px; padding: 32px; }
+.about-contact h2 { margin-top: 0; }
+.about-contact p { margin-bottom: 0; }
+@media (max-width: 1040px) {
+    .navbar { grid-template-columns: 1fr; }
+    .nav-links { grid-row: auto; }
+    .nav-actions { justify-self: start; flex-wrap: wrap; }
+    .about-hero { gap: 28px; }
+}
+@media (max-width: 720px) {
+    .about-hero, .about-principles, .about-focus-grid { grid-template-columns: 1fr; }
+    .about-contact { align-items: flex-start; flex-direction: column; }
+    .about-principles { margin-top: 32px; }
+    .about-focus { margin-block: 44px; }
+    .about-page { padding-top: 44px; }
+}

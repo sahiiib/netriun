@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-const assetVersion = "20260910-editor-1"
+const assetVersion = "20261003-about-theme-1"
 
 var ContentStore *cms.Store
 

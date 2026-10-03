@@ -29,3 +29,18 @@ body {
 .language-menu option {
     color: #07111f;
 }
+
+:root {
+    color-scheme: light;
+    --muted-strong: #344b63;
+    --line-strong: rgba(7, 17, 31, 0.22);
+    --teal: #087d68;
+    --blue: #2468aa;
+    --purple: #7353b6;
+}
+body::before { background-image: linear-gradient(rgba(7,17,31,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(7,17,31,.04) 1px, transparent 1px); }
+body::after { opacity: .08; }
+.infra-dashboard { background: var(--panel-strong); }
+.ring-meter span, .workflow-rail span { background: var(--bg-soft); }
+pre { color: #18573e; }
+.nav-cta, .btn-primary, .pricing-grid a, .contact-form button { background: linear-gradient(135deg, #45f0c2, #54a9ff); color: #04111d; }

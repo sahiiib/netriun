@@ -1,19 +1,36 @@
-function applyTheme(themeName) {
-    const theme = document.getElementById("theme-link");
-    const version = theme?.dataset.version;
-    const suffix = version ? `?v=${encodeURIComponent(version)}` : "";
-    const href = themeName === "light" ? `/static/css/light.css${suffix}` : `/static/css/dark.css${suffix}`;
+(() => {
+    const key = "netriun-theme-preference";
+    const allowed = ["system", "light", "dark"];
+    const system = window.matchMedia("(prefers-color-scheme: dark)");
+    const stylesheet = document.getElementById("theme-link");
+    let preference = "system";
+    try {
+        const saved = localStorage.getItem(key);
+        if (allowed.includes(saved)) preference = saved;
+    } catch (_) { /* Theme selection also works without browser storage. */ }
 
-    theme.setAttribute("href", href);
-    localStorage.setItem("netriun-theme", themeName);
-}
-
-function toggleTheme() {
-    const theme = document.getElementById("theme-link");
-    const nextTheme = theme.getAttribute("href").includes("dark") ? "light" : "dark";
-    applyTheme(nextTheme);
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    applyTheme(localStorage.getItem("netriun-theme") || "dark");
-});
+    function render() {
+        const theme = preference === "system" ? (system.matches ? "dark" : "light") : preference;
+        stylesheet.media = theme === "light" ? "all" : "not all";
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.style.colorScheme = theme;
+        const select = document.getElementById("theme-select");
+        if (select) select.value = preference;
+    }
+    render();
+    system.addEventListener("change", render);
+    window.addEventListener("storage", (event) => {
+        if (event.key === key || event.key === null) {
+            preference = allowed.includes(event.newValue) ? event.newValue : "system";
+            render();
+        }
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+        render();
+        document.getElementById("theme-select")?.addEventListener("change", (event) => {
+            preference = allowed.includes(event.target.value) ? event.target.value : "system";
+            try { localStorage.setItem(key, preference); } catch (_) {}
+            render();
+        });
+    });
+})();

@@ -37,9 +37,10 @@
 
     <link rel="icon" href="/static/img/logo.svg?v={{.AssetVersion}}" type="image/svg+xml">
     <link rel="stylesheet" href="/static/css/style.css?v={{.AssetVersion}}">
-    <link rel="stylesheet" href="/static/css/dark.css?v={{.AssetVersion}}" id="theme-link" data-version="{{.AssetVersion}}">
+    <meta name="color-scheme" content="dark light">
+    <link rel="stylesheet" href="/static/css/light.css?v={{.AssetVersion}}" id="theme-link" media="(prefers-color-scheme: light)">
 
-    <script defer src="/static/js/theme.js?v={{.AssetVersion}}"></script>
+    <script src="/static/js/theme.js?v={{.AssetVersion}}"></script>
     <script defer src="/static/js/lang.js?v={{.AssetVersion}}"></script>
     <script defer src="/static/js/app.js?v={{.AssetVersion}}"></script>
 </head>

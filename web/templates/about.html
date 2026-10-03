@@ -1,29 +1,46 @@
 {{define "content"}}
-
-<section class="page">
-
-<p class="eyebrow" data-i18n="about.eyebrow">Company</p>
-<h1 data-i18n="about.title">About Netriun</h1>
-
-<p class="page-lead">{{local .Content.About.Lead}}</p>
-
-<section class="brand-ownership glass-panel" aria-labelledby="ownership-heading">
-    <h2 id="ownership-heading" data-i18n="about.ownershipTitle">Brand ownership</h2>
-    <p>{{local .Content.About.Ownership}}</p>
-</section>
-
-<div class="about-grid">
-    <div class="glass-panel">
-        <h2 data-i18n="about.missionTitle">Our mission</h2>
-        <p>{{local .Content.About.Mission}}</p>
+<section class="page about-page">
+    <div class="about-hero">
+        <div>
+            <p class="eyebrow" data-i18n="about.eyebrow">Company</p>
+            <h1 data-i18n="about.headline">Clarity for complex infrastructure.</h1>
+            <p class="page-lead">{{local .Content.About.Lead}}</p>
+            <div class="about-actions">
+                <a class="btn-primary" href="/products" data-i18n="home.primary">Explore Platform</a>
+                <a class="btn-secondary" href="/contact" data-i18n="nav.contact">Contact</a>
+            </div>
+        </div>
+        <aside class="about-company glass-panel" aria-labelledby="ownership-heading">
+            <p class="eyebrow">Netriun</p>
+            <h2 id="ownership-heading" data-i18n="about.ownershipTitle">Brand ownership</h2>
+            <p>{{local .Content.About.Ownership}}</p>
+            <div class="about-location"><span aria-hidden="true">↗</span> Yerevan, Armenia</div>
+        </aside>
     </div>
-
-    <div class="glass-panel">
-        <h2 data-i18n="about.approachTitle">Our approach</h2>
-        <p>{{local .Content.About.Approach}}</p>
+    <div class="about-principles">
+        <article class="glass-panel">
+            <span class="about-number" aria-hidden="true">01 /</span>
+            <h2 data-i18n="about.missionTitle">Our mission</h2>
+            <p>{{local .Content.About.Mission}}</p>
+        </article>
+        <article class="glass-panel">
+            <span class="about-number" aria-hidden="true">02 /</span>
+            <h2 data-i18n="about.approachTitle">Our approach</h2>
+            <p>{{local .Content.About.Approach}}</p>
+        </article>
     </div>
-</div>
-
+    <section class="about-focus" aria-labelledby="focus-heading">
+        <p class="eyebrow" data-i18n="about.focusLabel">Our focus</p>
+        <h2 id="focus-heading" data-i18n="about.focusTitle">Connected systems. Clearer operations.</h2>
+        <div class="about-focus-grid">
+            <article><h3 data-i18n="about.networkTitle">Network infrastructure</h3><p data-i18n="about.networkText">Connectivity and orchestration for cloud, data center, and edge environments.</p></article>
+            <article><h3 data-i18n="about.operationsTitle">Everyday operations</h3><p data-i18n="about.operationsText">Tools that bring infrastructure visibility and management into a shared workflow.</p></article>
+            <article><h3 data-i18n="about.securityTitle">Security in context</h3><p data-i18n="about.securityText">An approach that treats access, network exposure, and operational control as part of the same picture.</p></article>
+        </div>
+    </section>
+    <section class="about-contact glass-panel">
+        <div><h2 data-i18n="about.contactTitle">Let’s talk about your infrastructure.</h2><p data-i18n="about.contactText">Tell us what you operate, where the complexity lies, and what you want to improve.</p></div>
+        <a class="btn-primary" href="/contact" data-i18n="nav.contact">Contact</a>
+    </section>
 </section>
-
 {{end}}

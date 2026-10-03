@@ -88,10 +88,10 @@
   "partners": [],
   "about": {
     "lead": {
-      "en": "Netriun builds AI-native networking infrastructure for enterprises, cloud providers and distributed edge environments.",
-      "de": "Netriun entwickelt KI-native Netzwerkinfrastruktur fur Unternehmen, Cloud-Anbieter und verteilte Edge-Umgebungen.",
-      "ru": "Netriun создает AI-native сетевую инфраструктуру для предприятий, cloud-провайдеров и распределенных edge-сред.",
-      "hy": "Netriun-ը կառուցում է AI-native ցանցային ենթակառուցվածք ձեռնարկությունների, cloud providers-ի եւ բաշխված edge միջավայրերի համար։"
+      "en": "Netriun develops software for network infrastructure and day-to-day operations. We bring connectivity, visibility, and management together to help teams work across cloud, data center, and edge environments.",
+      "de": "Netriun entwickelt Software für Netzwerkinfrastruktur und den täglichen Betrieb. Wir verbinden Konnektivität, Transparenz und Verwaltung, damit Teams über Cloud-, Rechenzentrums- und Edge-Umgebungen hinweg arbeiten können.",
+      "ru": "Netriun разрабатывает программное обеспечение для сетевой инфраструктуры и повседневной эксплуатации. Мы объединяем связность, наблюдаемость и управление, помогая командам работать в облаках, дата-центрах и периферийных средах.",
+      "hy": "Netriun-ը մշակում է ծրագրային ապահովում ցանցային ենթակառուցվածքի և ամենօրյա կառավարման համար։ Մենք միավորում ենք կապակցումը, տեսանելիությունն ու կառավարումը՝ օգնելով թիմերին աշխատել ամպային, տվյալների կենտրոնների և եզրային միջավայրերում։"
     },
     "ownership": {
       "en": "Netriun is a brand owned by Bamshi LLC, a company based in Yerevan, Armenia.",
@@ -100,16 +100,16 @@
       "hy": "Netriun-ը Bamshi LLC ընկերությանը պատկանող ապրանքանիշ է։ Ընկերությունը գտնվում է Երևանում, Հայաստան։"
     },
     "mission": {
-      "en": "We help infrastructure teams move from reactive operations to intelligent, intent-driven networks that adapt with the business.",
-      "de": "Wir helfen Infrastrukturteams, von reaktivem Betrieb zu intelligenten, absichtsgesteuerten Netzwerken zu wechseln, die mit dem Unternehmen wachsen.",
-      "ru": "Мы помогаем инфраструктурным командам перейти от реактивной эксплуатации к интеллектуальным intent-driven сетям, которые меняются вместе с бизнесом.",
-      "hy": "Մենք օգնում ենք ենթակառուցվածքային թիմերին անցնել reactive operations-ից դեպի խելացի, intent-driven ցանցեր, որոնք հարմարվում են բիզնեսին։"
+      "en": "Make complex infrastructure easier to understand and operate. Our goal is to help teams spend less time navigating disconnected tools and more time improving the systems their businesses rely on.",
+      "de": "Komplexe Infrastruktur verständlicher und leichter bedienbar machen. Unser Ziel ist, dass Teams weniger Zeit mit isolierten Werkzeugen und mehr Zeit mit der Verbesserung geschäftskritischer Systeme verbringen.",
+      "ru": "Сделать сложную инфраструктуру понятнее и удобнее в эксплуатации. Наша цель — помочь командам тратить меньше времени на разрозненные инструменты и больше — на улучшение систем, от которых зависит бизнес.",
+      "hy": "Բարդ ենթակառուցվածքը դարձնել ավելի հասկանալի և հեշտ կառավարելի։ Մեր նպատակն է օգնել թիմերին ավելի քիչ ժամանակ ծախսել տարանջատված գործիքների վրա և ավելի շատ՝ բիզնեսի համար կարևոր համակարգերի բարելավման վրա։"
     },
     "approach": {
-      "en": "Netriun combines deep telemetry, automation guardrails and human-readable AI recommendations so teams can trust every change.",
-      "de": "Netriun kombiniert tiefe Telemetrie, Automatisierungsleitplanken und verstandliche KI-Empfehlungen, damit Teams jeder Anderung vertrauen konnen.",
-      "ru": "Netriun объединяет глубокую телеметрию, автоматизационные guardrails и понятные AI-рекомендации, чтобы команды доверяли каждому изменению.",
-      "hy": "Netriun-ը համադրում է խոր telemetry, automation guardrails եւ մարդուն հասկանալի AI recommendations, որպեսզի թիմերը վստահեն յուրաքանչյուր փոփոխությանը։"
+      "en": "Start with real operational needs: understanding system health, managing change, and keeping control across environments. We develop focused products around these workflows, with an emphasis on clear interfaces, practical automation, and security.",
+      "de": "Ausgangspunkt sind konkrete betriebliche Anforderungen: den Systemzustand verstehen, Änderungen verwalten und die Kontrolle über verschiedene Umgebungen behalten. Wir entwickeln darauf abgestimmte Produkte mit klaren Oberflächen, praxisnaher Automatisierung und Sicherheit.",
+      "ru": "Мы начинаем с реальных задач эксплуатации: понимания состояния систем, управления изменениями и контроля над разными средами. Вокруг этих процессов мы создаём специализированные продукты с понятными интерфейсами, практичной автоматизацией и вниманием к безопасности.",
+      "hy": "Սկսում ենք իրական գործառնական կարիքներից՝ հասկանալ համակարգերի վիճակը, կառավարել փոփոխությունները և պահպանել վերահսկողությունը տարբեր միջավայրերում։ Այս գործընթացների շուրջ մշակում ենք նպատակային արտադրանք՝ կարևորելով հստակ միջերեսները, գործնական ավտոմատացումն ու անվտանգությունը։"
     }
   },
   "recipients": {
